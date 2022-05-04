@@ -45,6 +45,9 @@ FROM jogo INNER JOIN localizacao
 ON localizacao.id = jogo.localizacao_Id;
 
 -- Identificar o nome dos jogos da seção de jogos de Aventura.
+-- INNER JOIN == INTERSEÇÃO entre as tabelas
+-- LEFT JOIN == Mostra a tabela esquerda + a INTERSEÇÃO. FROM localizacao LEFT JOIN jogo.
+-- RIGHT JOIN ==  É o inverso de LEFT JOIN; Mostra a interseção + tabela da direita + produto adicional (se houver). 
 
 SELECT jogo.nome
 FROM jogo INNER JOIN localizacao
@@ -53,6 +56,10 @@ WHERE secao = 'Aventura';
 
 -- Identificar TODAS as seções e os respectivos nomes dos
 -- jogos, ordenando as seleções em ordem crescente pelo nome dos jogos.
+-- Identificar o nome dos jogos da seção de jogos de Aventura.
+-- INNER JOIN == INTERSEÇÃO entre as tabelas
+-- LEFT JOIN == Mostra a tabela esquerda + a INTERSEÇÃO. FROM localizacao LEFT JOIN jogo.
+-- RIGHT JOIN ==  É o inverso de LEFT JOIN; Mostra a interseção + tabela da direita + produto adicional (se houver). 
 
 SELECT  localizacao.secao, localizacao.prateleira, jogo.nome
 FROM localizacao LEFT JOIN jogo
