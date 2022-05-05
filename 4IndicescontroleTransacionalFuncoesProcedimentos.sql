@@ -101,6 +101,9 @@ WHERE passeio.escuna_Numero = escuna.numero AND
     
 -- Criação da VIEW ---------------------------------------
     
+    /*Toda vez que for necessário um relatório constando
+    o nome do barco, destino, hora, chegada e saída, é só buscar dentro da view*/
+
 CREATE VIEW v_consulta AS
 	SELECT escuna.nome AS "Escuna", 
 		destino.nome AS "Ilha", 
